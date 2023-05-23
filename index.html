@@ -8,6 +8,32 @@
 </head>
 
 <style>
+  @keyframes pump {
+    0% {
+      transform: translateX(94%) scale(0.3);
+      opacity: 0;
+    }
+    
+    25% {
+      transform: translateX(94%) scale(0.3);
+      opacity: 1;
+    }
+    
+    50% {
+      transform: translateX(94%) scale(0.4);
+      opacity: 1;
+    }
+    
+    75% {
+      transform: translateX(94%) scale(0.35);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translateX(94%) scale(0.3);
+      opacity: 1;
+    }
+  }
   @keyframes text-animation {
     0% {
       opacity: 0;
@@ -126,7 +152,7 @@
 
   .text-item:nth-child(3) {
     margin-top: 20px;
-    animation-delay: 6s;
+    animation-delay: 10s;
   }
 
   .corazon {
@@ -137,6 +163,9 @@
     transform: translateX(94%) scale(0.3);
     top: 19.35%;
     margin-top: 180px;
+    animation: pump 8s ease-in-out infinite;
+    animation-delay: 4s;
+    opacity: 0;
     z-index: 3;
   }
 
