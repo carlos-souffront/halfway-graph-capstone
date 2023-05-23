@@ -48,17 +48,17 @@
     margin: 0;
     padding: 0;
   }
-  
+
   .halfway-bg {
     background-color: #fff;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    background-image: conic-gradient(#89cff0, 
-      #ffb6c1, 
-      #89cff0, 
-      #ffb6c1);
+    background-image: conic-gradient(#89cff0,
+        #ffb6c1,
+        #89cff0,
+        #ffb6c1);
     position: absolute;
     overflow: hidden;
     z-index: 1;
@@ -84,7 +84,7 @@
     animation: progress 4s ease-in-out forwards;
     animation-delay: 5s;
   }
-  
+
   .halfway-text {
     position: absolute;
     top: 20%;
@@ -100,35 +100,79 @@
     z-index: 3;
     overflow: hidden;
   }
-  
-  .text-item{
+
+  .text-item {
     opacity: 0;
     font-size: 25px;
     font-family: "Bungee Shade";
     color: #b0e0e6;
     animation: text-animation 5s linear forwards;
     z-index: 3;
-    text-shadow: -1px -1px 0 #da70d6, 
-      1px -1px 0 #da70d6, 
+    text-shadow: -1px -1px 0 #da70d6,
+      1px -1px 0 #da70d6,
       -1px 1px 0 #da70d6,
       1px 1px 0 #da70d6;
   }
-  
+
   .text-item:nth-child(1) {
     margin-top: 0;
     animation-delay: 0s;
   }
-  
+
   .text-item:nth-child(2) {
     margin-top: 180px;
     animation-delay: 3s;
   }
-  
+
   .text-item:nth-child(3) {
     margin-top: 20px;
     animation-delay: 6s;
   }
 
+  .corazon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 51.9%;
+    transform: translateX(94%) scale(0.3);
+    top: 19.35%;
+    margin-top: 180px;
+    z-index: 3;
+  }
+
+  .left-half,
+  .right-half {
+    width: 50px;
+    height: 80px;
+    background-color: #e0115f;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
+      0 0 5px rgba(255, 182, 193, 0.2);
+  }
+
+  .shine {
+    width: 9px;
+    height: 28px;
+    background: linear-gradient(to top right,
+        #f1e5ac, transparent);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-26.8px) translateY(-70px) rotate(45deg);
+    border-radius: 0 0 50% 50%;
+  }
+
+  .left-half {
+    left: 0;
+    transform: translateX(69px) rotate(-45deg);
+  }
+
+  .right-half {
+    right: 0;
+    transform: translateX(40px) rotate(45deg);
+  }
 </style>
 
 <div class="halfway-bg"></div>
@@ -137,6 +181,11 @@
 </div>
 <div class="halfway-text">
   <span class="text-item">Sick of Me Yet?</span>
-  <span class="text-item">Don't Fret Love</span>
+  <span class="text-item">Don't Fret Amor</span>
   <span class="text-item">You're halfway there!</span>
+</div>
+<div class="corazon">
+  <div class="left-half"></div>
+  <div class="right-half"></div>
+  <div class="shine"></div>
 </div>
